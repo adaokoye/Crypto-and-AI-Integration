@@ -37,7 +37,9 @@ function agentExecuteTransaction(
 ```
 EXPLANATION
 
-Purpose: The agentExecuteTransaction function in the MultiPartyEscrow contract makes an agent capable of executing a transaction on an escrow's behalf. This function allows for the transfer of tokens from the escrow to some recipient and, in addition, facilitates the execution of extra arbitrary logic on that recipient's contract.
+Purpose:
+
+The agentExecuteTransaction function in the MultiPartyEscrow contract makes an agent capable of executing a transaction on an escrow's behalf. This function allows for the transfer of tokens from the escrow to some recipient and, in addition, facilitates the execution of extra arbitrary logic on that recipient's contract.
 
 Detailed Usage:
 
@@ -45,6 +47,7 @@ This function fetches the details of the escrow from the escrows mapping using _
 It ensures that _amount tokens will be transferred to the _recipient using the transfer function.
 The function then makes a high-level call, executing further logic on the _recipient contract by passing the _data parameter containing the encoded function call with its arguments.
 Emits an `Executed` event to log the transaction execution.
+
 Impact :
 
 The agentExecuteTransaction function is instrumental in facilitating elaborate interactions and complex transactions between different components on the SingularityNET platform. By so doing, it would help bring out a wide variety of scenarios to take place, allowing agents to perform arbitrary logic on the recipient contract and thus increasing flexibility of the described platform.
